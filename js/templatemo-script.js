@@ -274,3 +274,37 @@ $(document).ready(function () {
 $('#testimonials').click(function() {
     window.location.href = 'https://site58674.overdrive.io/#';
   });
+  const imageUrls = [
+    'img/quancao/a1.jpg',
+    'img/quancao/a2.jpg',
+    'img/quancao/a3.jpg',
+    'img/quancao/a4.jpg',
+    'img/quancao/a5.jpg',
+    'img/quancao/a6.jpg',
+    'img/quancao/a7.jpg',
+    'img/quancao/a8.jpg'
+    // Add more image URLs as needed
+];
+
+function loadImages() {
+    const gallery = document.getElementById('gallery2');
+    gallery.innerHTML = '';
+    imageUrls.forEach(url => {
+        const img = document.createElement('img');
+        img.src = url;
+        gallery.appendChild(img);
+    });
+}
+
+function shuffleImages() {
+    for (let i = imageUrls.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [imageUrls[i], imageUrls[j]] = [imageUrls[j], imageUrls[i]];
+    }
+    loadImages();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadImages();
+    setInterval(shuffleImages, 5000); // Change layout every 5 seconds
+});
