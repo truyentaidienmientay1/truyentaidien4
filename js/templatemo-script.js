@@ -306,5 +306,5 @@ function shuffleImages() {
 
 document.addEventListener('DOMContentLoaded', () => {
     loadImages();
-    setInterval(shuffleImages, 5000); // Change layout every 5 seconds
+    setInterval(shuffleImages, 3000); // Change layout every 5 seconds
 });
