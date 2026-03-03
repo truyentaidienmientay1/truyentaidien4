@@ -16,7 +16,52 @@
         <!-- https://fontawesome.com/ -->
         <link rel="stylesheet" href="css/magnific-popup.css">
         <link rel="stylesheet" href="css/templatemo-ocean-vibes.css">
+<style>
+.library-item {
+    padding: 14px 18px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
 
+.library-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ===== FOLDER ===== */
+.library-folder {
+    cursor: pointer;
+}
+
+.library-folder span {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.library-folder:hover span {
+    color: #1976d2;
+}
+
+/* ===== FILE ===== */
+.library-file {
+    justify-content: space-between;
+}
+
+.download-btn {
+    background: #1976d2;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.download-btn:hover {
+    background: #0d47a1;
+}
+</style>
     </head>
     <body>
         <header class="tm-site-header">
@@ -53,9 +98,8 @@
                     </li>
 
                     <li class="tm-nav-item">
-                        <a href="https://site58674.overdrive.io/#"
-                            data-effect="mfp-move-from-top" class="tm-nav-link"
-                            id="testimonials">
+                      <a href="#library-popup"
+    data-effect="mfp-move-from-top" class="tm-nav-link">
                             Thư viện
                             <img src="img/thumuc.png" alt="Ảnh minh họa"
                                 width="80%" height="auto">
@@ -502,7 +546,21 @@
                     </div>
                 </div>
             </div>
+<!-- ================= THƯ VIỆN GOOGLE DRIVE ================= -->
+<div id="library-popup" class="popup mfp-with-anim mfp-hide tm-bg-gray">
+    <a href="#" class="tm-close-popup">
+        Trở về
+        <i class="fas fa-times"></i>
+    </a>
 
+    <h2 class="tm-color-primary tm-page-title">Thư viện tài liệu</h2>
+
+    <div id="breadcrumb" style="margin:20px 0;font-weight:bold;"></div>
+
+    <div id="library" style="background:#fff;padding:20px;border-radius:6px;">
+        Đang tải dữ liệu...
+    </div>
+</div>
             <div id="about" class="popup mfp-with-anim mfp-hide tm-bg-gray">
                 <a href="#" class="tm-close-popup">
                     Trở về
@@ -660,5 +718,6 @@
             <script src="js/isotope.pkgd.min.js"></script>
             <script src="js/jquery.magnific-popup.min.js"></script>
             <script src="js/templatemo-script.js"></script>
+            <script src="js/library.js"></script>
         </body>
     </html>
